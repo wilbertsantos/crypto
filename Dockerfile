@@ -14,7 +14,14 @@ RUN apt-get update && apt-get install -qy --no-install-recommends \
     libzip-dev \
     libonig-dev \
     zip \
-    unzip
+    unzip \
+    git \
+    supervisor \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    libzip-dev \
+    && docker-php-ext-install pdo_mysql gd mbstring exif pcntl bcmath zip 
 
 RUN docker-php-ext-install \
     bcmath \
